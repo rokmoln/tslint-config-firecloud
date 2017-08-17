@@ -11,6 +11,7 @@ In your project's `tslint.json`
     "override-some-rule": false
   }
 }
+```
 
 Optionally, you can run `node_modules/tslint-config-firecloud/npm-install-peer-dependencies`
 in order to install the required peer dependencies.
