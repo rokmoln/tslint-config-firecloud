@@ -12,8 +12,8 @@ In your project's `tslint.json`
   }
 }
 
-In order to install the required peer dependencies,
-you can run `node_modules/eslint-config-firecloud/npm-install-peer-dependencies`.
+Optionally, you can run `node_modules/tslint-config-firecloud/npm-install-peer-dependencies`
+in order to install the required peer dependencies.
 
 
 ## License
