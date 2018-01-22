@@ -9,5 +9,8 @@ charset = utf-8
 trim_trailing_whitespace = true
 max_line_length = 120
 
+[.travis.yml]
+max_line_length = none
+
 [npm-install-peer-dependencies]
 max_line_length = 1024
