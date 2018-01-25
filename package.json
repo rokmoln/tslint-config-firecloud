@@ -9,7 +9,7 @@
     "eclint": "2.3.0"
   },
   "peerDependencies": {
-    "tslint": "4.5.1"
+    "tslint": "5.7.0"
   },
   "scripts": {
     "test": "eclint check $(git ls-files | grep -v -e \"^package-lock.json$\" -e \"^LICENSE$\" -e \"^UNLICENSE$\")"
