@@ -1,5 +1,7 @@
 # tslint-config-firecloud [![Build Status][2]][1]
 
+The TSLint config used within Tobii Cloud Services.
+
 In your project's `tslint.json`
 
 ```json
