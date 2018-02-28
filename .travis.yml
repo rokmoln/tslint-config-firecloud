@@ -1,16 +1,4 @@
-sudo: false
-language:
-  - node_js
-node_js:
-  - node
-cache:
-  directories:
-    - node_modules
-install:
-  - npm install
-script:
-  - npm test
-
+# 1. Notifications
 notifications:
   slack:
     rooms:
@@ -18,3 +6,46 @@ notifications:
       - secure: "w4ywgEcpZnUKrPEdsK2zXf+D9yngtEwKiEHt3xK93zp0vy3s84RAUCwBZu3vfyWzvc7dlWn8ar2ruES+6M2kzzcDJiH6S/pL08/2OhNLGRVLb998182U/a8vsuxxIX4JcxNLdJCkqhzsyEVQJytPNA7uk+90l+UlEnCIhjax2glRmnCHkTOZT3B5UliQYoATr/es0SrKR6OjKTkxsaXR8741UKE+CeBmWPTmwbpp/lpmxchbuorFJPZybgObWgEmqrY4CKajKKaxFwK5bFONtanRxIGnSCS9hT56gKi8Vr6P3S7gqqAuBBwNXlXddAazR/BZi+uOng8X8Gr1t3RWgTPLCgNi3L4vtj6yK2tnDu2mXmKI0ExqOqQPLb1G97uqNt+S6YlNQm45+QS3ZRLJq7+f3aCGOF2f48ocmVH8h6OBFgvlLThvrIcIwgywqKJzkTJTQW5/M/e0+5Y+rqpRDICTGkBGpdM6pNV4TJWs64lFXV5Dbx/CCsC9bs7VSEOV/r9wM/ElsRsX3xffk3c4jU4R839bfuvH4kylBdXUUuXi+jdZqQqV0Ll0XZJc6yJVC+KjdlkUA01CJKbn3k73po5mjULpwuCEVFegrl3HZOfPvzftVdQ0mzZC5MWG/nG+Viitz2GNpEfcXHshaa2/WEHmNFElZYLSEwi9S66PZ5I=" # cloud-ci
     on_success: :change
     on_pull_requests: false
+
+
+# 2. Env
+# env:
+
+# 3. Git
+# git:
+branches:
+  except:
+    - /^f\// # feature branches require PR
+
+# 4. Bootstrap
+os: linux
+dist: trusty
+sudo: false
+language:
+  - node_js
+node_js:
+  - node
+# addons:
+before_cache: ./.travis.sh before_cache
+cache:
+  directories:
+    - $HOME/.local
+    - $HOME/.npm
+    - $HOME/.pip-cache/
+    - $HOME/Library/Caches/Homebrew
+    - /tmp/support-firecloud.cache
+    - node_modules
+
+# 5. Steps
+before_install: ./.travis.sh before_install
+install: ./.travis.sh install
+before_script: ./.travis.sh before_script
+script: ./.travis.sh script
+after_success: ./.travis.sh after_success
+after_failure: ./.travis.sh after_failure
+after_script: ./.travis.sh after_script
+
+# 6. Deploy
+before_deploy: ./.travis.sh before_deploy
+# deploy:
+after_deploy: ./.travis.sh after_deploy
