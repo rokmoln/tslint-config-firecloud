@@ -2,10 +2,9 @@
   "private": true,
   "name": "tslint-config-firecloud",
   "description": "The TSLint config used within Tobii Cloud Services.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "Unlicense",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eclint": "2.3.0"
   },
