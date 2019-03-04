@@ -4,15 +4,25 @@
   "description": "The TSLint config used within Tobii Cloud Services.",
   "version": "0.0.4",
   "license": "Unlicense",
+  "files": [
+    "/BUILD",
+    "/UNLICENSE",
+    "/VERSION",
+    "/configs/",
+    "/index.js",
+    "/npm-install-peer-dependencies"
+  ],
   "dependencies": {},
   "peerDependencies": {
-    "tslint": "4.5.1"
+    "tslint": "4.5.1",
+    "typescript": ">=2.0.0"
   },
   "devDependencies": {
     "eclint": "2.3.0",
-    "tslint": "4.5.1"
+    "tslint": "4.5.1",
+    "typescript": ">=2.0.0"
   },
   "scripts": {
-    "test": "eclint check $(git ls-files | grep -v -e \"^package-lock.json$\" -e \"^LICENSE$\" -e \"^UNLICENSE$\")"
+    "postinstall": "echo '___ WARN Maybe you want to run node_modules/tslint-config-firecloud/npm-install-peer-dependencies.'"
   }
 }
