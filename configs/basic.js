@@ -21,6 +21,7 @@ module.exports = {
     ban: false,
     'ban-ts-ignore': false,
     'ban-types': false,
+    'binary-expression-operand-order': false,
     'class-name': true,
     'comment-format': [
       true,
@@ -63,6 +64,7 @@ module.exports = {
       'variables-before-functions'
     ],
     'newline-before-return': false,
+    'newline-per-chained-call': false,
     'no-angle-bracket-type-assertion': true,
     'no-any': false,
     'no-arg': true,
@@ -186,6 +188,11 @@ module.exports = {
       'check-preblock',
       'check-separator',
       'check-type'
-    ]
+    ],
+
+
+    'promise-function-async': true,
+    'no-null-undefined-union': true,
+    'type-literal-delimiter': true
   }
 };
