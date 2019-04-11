@@ -19,20 +19,27 @@ module.exports = {
     ],
     'await-promise': true,
     ban: false,
+    'ban-ts-ignore': false,
     'ban-types': false,
     'class-name': true,
     'comment-format': [
       true,
       'check-space'
     ],
+    'completed-docs': false,
     curly: true,
     'cyclomaticComplexity': [
       true,
       20
     ],
     eofline: true,
+    'file-name-casing': [
+      true,
+      'kebab-case'
+    ],
     forin: true,
     'import-spacing': true,
+    'increment-decrement': false,
     indent: [
       true,
       'spaces'
@@ -66,6 +73,8 @@ module.exports = {
     'no-console': false,
     'no-construct': true,
     'no-debugger': true,
+    'no-default-export': false,
+    'no-dynamic-delete': false,
     'no-duplicate-super': true,
     'no-duplicate-variable': true,
     'no-empty': true,
@@ -74,13 +83,16 @@ module.exports = {
     'no-inferrable-types': false,
     'no-internal-module': true,
     'no-import-side-effect': false, // true, // FIXME
+    'no-magic-numbers': false,
     'no-misused-new': true,
     'no-non-null-assertion': true,
     'no-null-keyword': false,
     'no-parameter-properties': false,
+    'no-parameter-reassignment': false,
     'no-require-imports': true,
     'no-shadowed-variable': true,
     'no-string-literal': true,
+    'no-submodule-imports': false,
     'no-switch-case-fall-through': true,
     'no-trailing-whitespace': true,
     'no-unbound-method': true,
@@ -91,6 +103,7 @@ module.exports = {
     'no-use-before-declare': true,
     'no-var-keyword': true,
     'no-var-requires': true,
+    'no-unnecessary-class': false,
     'object-literal-key-quotes': [
       true,
       'as-needed'
@@ -104,6 +117,7 @@ module.exports = {
       'check-finally',
       'check-whitespace'
     ],
+    'only-arrow-functions': false,
     'prefer-for-of': false,
     'prefer-function-over-method': false, // true, // FIXME
     'prefer-method-signature': true,
