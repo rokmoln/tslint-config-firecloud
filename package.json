@@ -17,12 +17,6 @@
     "tslint": "^5.9.1",
     "typescript": "^3.0.3"
   },
-  "devDependencies": {
-    "eclint": "^2.3.0",
-    "npm-publish-git": "git://github.com/andreineculau/npm-publish-git.git#semver:~0.0.8",
-    "tslint": "^5.9.1",
-    "typescript": "^3.0.3"
-  },
   "scripts": {
     "postinstall": "echo '___ WARN Maybe you want to run node_modules/tslint-config-firecloud/npm-install-peer-dependencies.'"
   }
