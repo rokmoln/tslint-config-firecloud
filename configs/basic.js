@@ -8,6 +8,7 @@ module.exports = {
     'interface-name': true,
     'jsdoc-format': true,
     'no-angle-bracket-type-assertion': true,
+    'no-parameter-properties': false,
     typedef: [
       true,
       'call-signature',
