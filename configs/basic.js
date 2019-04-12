@@ -5,6 +5,7 @@ module.exports = {
       'array'
     ],
     'await-promise': true,
+    'ban-ts-ignore': false,
     'interface-name': true,
     'jsdoc-format': true,
     'no-angle-bracket-type-assertion': true,
