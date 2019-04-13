@@ -4,21 +4,27 @@
 module.exports = {
   rules: {
     // rules not (yet) supported by https://github.com/typescript-eslint/typescript-eslint
+    'deprecation': true, // requiresTypeInfo
     'match-default-export-name': false,
     'no-boolean-literal-compare': true,
     'no-floating-promises': true,
+    'no-for-in-array': true, // requiresTypeInfo
     'no-inferred-empty-object-type': true,
     'no-mergeable-namespace': true,
     'no-null-undefined-union': true,
     'no-redundant-jsdoc': true,
     'no-reference-import': true,
+    'no-restricted-globals': false, // requiresTypeInfo
     'no-unsafe-any': true,
+    'no-void-expression': true, // requiresTypeInfo
     'prefer-readonly': false,
     'return-undefined': false, // requiresTypeInfo
     'strict-boolean-expressions': true,
     'strict-type-predicates': true,
     'type-literal-delimiter': true,
     typedef: true,
+    'unnecessary-bind': true, // requiresTypeInfo
+    'use-default-type-parameter': true, // requiresTypeInfo
 
     // -------------------------------------------------------------------------
 
@@ -57,7 +63,7 @@ module.exports = {
     'no-unnecessary-qualifier': true, // @typescript-eslint/no-unnecessary-qualifier
     'no-unnecessary-type-assertion': true, // @typescript-eslint/no-unnecessary-type-assertion
     // ignored, not really typescriptOnly
-    // 'no-unused-variables': true, // // @typescript-eslint/no-unused-vars
+    // 'no-unused-variable': true, // // @typescript-eslint/no-unused-vars
     // ignored, not really typescriptOnly
     // 'no-var-requires': true, // @typescript-eslint/no-var-requires
     // ignored, not really requiresTypeInfo
