@@ -7,7 +7,7 @@ In your project's `tslint.json`
 ```json
 {
   "extends": [
-    "firecloud"
+    "tslint-config-firecloud"
   ],
   "rules": {
     "override-some-rule": false
