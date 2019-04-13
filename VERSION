@@ -1,0 +1,11 @@
+PKG_NAME=tslint-config-firecloud
+PKG_VSN=0.2.0-eslint.1
+BUILD_VSN=0.2.0-eslint.1_b35a98485101e79ae8e393a7eae7e516d9cf3977
+BUILD_DATE=190413
+BUILD_TIME=230321
+BUILD_GIT_HASH=b35a984
+BUILD_GIT_BRANCH=anu-keep-only-ts-specifics
+BUILD_OS=darwin
+BUILD_OS_ARCH=x86_64
+BUILD_USER=andrei
+BUILD_HOSTNAME=andrei-tobiipro.local
