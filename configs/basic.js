@@ -20,7 +20,7 @@ module.exports = {
     'prefer-readonly': false,
     'return-undefined': false, // requiresTypeInfo
     'strict-boolean-expressions': true,
-    'strict-type-predicates': true,
+    'strict-type-predicates': false, // true, // ignored because it requires tslint-strict-null-checks
     'type-literal-delimiter': true,
     typedef: true,
     'unnecessary-bind': true, // requiresTypeInfo
