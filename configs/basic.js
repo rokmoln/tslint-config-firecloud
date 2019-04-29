@@ -1,162 +1,76 @@
-module.exports = {
-  extends: [
-    'tslint:all'
-  ],
+// only rules marked as
+// typescriptOnly:true (default) or requiresTypeInfo:true
 
+module.exports = {
   rules: {
-    align: [
-      true,
-      'parameters',
-      'statements'
-    ],
-    'array-type': [
+    // rules not (yet) supported by https://github.com/typescript-eslint/typescript-eslint
+    'deprecation': true, // requiresTypeInfo
+    'match-default-export-name': false,
+    'no-boolean-literal-compare': true,
+    'no-floating-promises': true,
+    'no-for-in-array': true, // requiresTypeInfo
+    'no-inferred-empty-object-type': true,
+    'no-mergeable-namespace': true,
+    'no-null-undefined-union': true,
+    'no-redundant-jsdoc': true,
+    'no-reference-import': true,
+    'no-restricted-globals': false, // requiresTypeInfo
+    'no-unsafe-any': true,
+    'no-void-expression': true, // requiresTypeInfo
+    'prefer-readonly': false,
+    'return-undefined': false, // requiresTypeInfo
+    'strict-boolean-expressions': true,
+    'strict-type-predicates': false, // true, // ignored because it requires tslint-strict-null-checks
+    'type-literal-delimiter': true,
+    typedef: true,
+    'unnecessary-bind': true, // requiresTypeInfo
+    'use-default-type-parameter': true, // requiresTypeInfo
+
+    // -------------------------------------------------------------------------
+
+    // rules supported by https://github.com/typescript-eslint/typescript-eslint
+    'adjacent-overload-signatures': true, // @typescript-eslint/adjacent-overload-signatures
+    'array-type': [ // @typescript-eslint/array-type
       true,
       'array'
     ],
-    'arrow-return-shorthand': [
-      true,
-      'multiline'
-    ],
-    'await-promise': true,
-    ban: false,
-    'ban-ts-ignore': false,
-    'ban-types': false,
-    'binary-expression-operand-order': false,
-    'class-name': true,
-    'comment-format': [
-      true,
-      'check-space'
-    ],
-    'completed-docs': false,
-    curly: true,
-    'cyclomaticComplexity': [
-      true,
-      20
-    ],
-    eofline: true,
-    'file-name-casing': [
-      true,
-      'kebab-case'
-    ],
-    forin: true,
-    'import-spacing': true,
-    'increment-decrement': false,
-    indent: [
-      true,
-      'spaces'
-    ],
-    'interface-name': true,
-    'jsdoc-format': true,
-    'label-position': true,
-    'match-default-export-name': true,
-    'max-classes-per-file': [
-      true,
-      2
-    ],
-    'max-line-length': [
-      true,
-      200
-    ],
-    'member-access': false,
-    'member-ordering': [
-      true,
-      'static-before-instance',
-      'variables-before-functions'
-    ],
-    'newline-before-return': false,
-    'newline-per-chained-call': false,
-    'no-angle-bracket-type-assertion': true,
-    'no-any': false,
-    'no-arg': true,
-    'no-bitwise': true,
-    'no-boolean-literal-compare': true,
-    'no-conditional-assignment': true,
-    'no-consecutive-blank-lines': false,
-    'no-console': false,
-    'no-construct': true,
-    'no-debugger': true,
-    'no-default-export': false,
-    'no-dynamic-delete': false,
-    'no-duplicate-super': true,
-    'no-duplicate-variable': true,
-    'no-empty': true,
-    'no-eval': true,
-    'no-floating-promises': true,
-    'no-inferrable-types': false,
-    'no-internal-module': true,
-    'no-import-side-effect': false, // true, // FIXME
-    'no-magic-numbers': false,
-    'no-misused-new': true,
-    'no-non-null-assertion': true,
-    'no-null-keyword': false,
-    'no-parameter-properties': false,
-    'no-parameter-reassignment': false,
-    'no-require-imports': true,
-    'no-shadowed-variable': true,
-    'no-string-literal': true,
-    'no-submodule-imports': false,
-    'no-switch-case-fall-through': true,
-    'no-trailing-whitespace': true,
-    'no-unbound-method': true,
-    'no-unnecessary-initializer': true,
-    'no-unnecessary-qualifier': true,
-    'no-unsafe-any': true,
-    'no-unused-expression': true,
-    'no-use-before-declare': true,
-    'no-var-keyword': true,
-    'no-var-requires': true,
-    'no-unnecessary-class': false,
-    'object-literal-key-quotes': [
-      true,
-      'as-needed'
-    ],
-    'object-literal-sort-keys': false,
-    'one-line': [
-      true,
-      'check-open-brace',
-      'check-catch',
-      'check-else',
-      'check-finally',
-      'check-whitespace'
-    ],
-    'only-arrow-functions': false,
-    'prefer-for-of': false,
-    'prefer-function-over-method': false, // true, // FIXME
-    'prefer-method-signature': true,
-    quotemark: [
-      true,
-      'single',
-      'avoid-escape'
-    ],
-    radix: true,
-    'semicolon': [
-      true,
-      'always'
-    ],
-    'space-before-function-paren': [
-      true,
-      'never'
-    ],
-    'strict-boolean-expressions': false,
-    'strict-type-predicates': true,
-    'switch-default': true,
-    'trailing-comma': [
+    'await-promise': true, // @typescript-eslint/await-thenable
+    'ban-ts-ignore': false, // @typescript-eslint/ban-ts-ignore
+    'ban-types': false, // @typescript-eslint/ban-types
+    'callable-types': true, // @typescript-eslint/prefer-function-type
+    'interface-name': true, // @typescript-eslint/interface-name-prefix
+    'interface-over-type-literal': true, // @typescript-eslint/no-type-alias, @typescript-eslint/prefer-interface
+    'member-access': false, // @typescript-eslint/explicit-member-accessibility
+    'member-ordering': [ // @typescript-eslint/member-ordering
       true,
       {
-        'multiline': 'never',
-        'singleline': 'never'
+        order: 'fields-first'
       }
     ],
-    'triple-equals': [
-      true,
-      'allow-null-check'
-    ],
-    typedef: [
-      true,
-      'call-signature',
-      'parameter'
-    ],
-    'typedef-whitespace': [
+    'no-angle-bracket-type-assertion': true, // @typescript-eslint/no-angle-bracket-type-assertion
+    'no-any': false, // @typescript-eslint/no-explicit-any
+    'no-empty-interface': true, // @typescript-eslint/no-empty-interface
+    'no-inferrable-types': false, // @typescript-eslint/no-inferrable-types
+    'no-internal-module': true, // @typescript-eslint/prefer-namespace-keyword
+    'no-misused-new': true, // @typescript-eslint/no-misused-new
+    'no-namespace': true, // @typescript-eslint/no-namespace
+    'no-non-null-assertion': true, // @typescript-eslint/no-non-null-assertion
+    'no-object-literal-type-assertion': true, // @typescript-eslint/no-object-literal-type-assertion
+    'no-parameter-properties': true, // @typescript-eslint/no-parameter-properties
+    // typescript specific but not marked typescriptOnly
+    'no-reference': true, // @typescript-eslint/no-triple-slash-reference
+    'no-unbound-method': true, // @typescript-eslint/unbound-method
+    'no-unnecessary-qualifier': true, // @typescript-eslint/no-unnecessary-qualifier
+    'no-unnecessary-type-assertion': true, // @typescript-eslint/no-unnecessary-type-assertion
+    // ignored, not really typescriptOnly
+    // 'no-unused-variable': true, // // @typescript-eslint/no-unused-vars
+    // ignored, not really typescriptOnly
+    // 'no-var-requires': true, // @typescript-eslint/no-var-requires
+    // ignored, not really requiresTypeInfo
+    // 'no-use-before-declare': true, // requiresTypeInfo, @typescript-eslint/no-use-before-define
+    'promise-function-async': true, // requiresTypeInfo, @typescript-eslint/promise-function-async
+    'restrict-plus-operands': true, // requiresTypeInfo, @typescript-eslint/restrict-plus-operands
+    'typedef-whitespace': [ // @typescript-eslint/type-annotation-spacing
       true,
       {
         'call-signature': 'nospace',
@@ -166,33 +80,35 @@ module.exports = {
         'variable-declaration': 'nospace'
       },
       {
-        'call-signature': 'space',
-        'index-signature': 'space',
-        'parameter': 'space',
-        'property-declaration': 'space',
-        'variable-declaration': 'space'
+        'call-signature': 'onespace',
+        'index-signature': 'onespace',
+        'parameter': 'onespace',
+        'property-declaration': 'onespace',
+        'variable-declaration': 'onespace'
       }
     ],
-    'typeof-compare': true,
-    'unified-signatures': true,
-    'variable-name': [
-      true,
-      // 'check-format'
-      'ban-keywords'
-    ],
-    whitespace: [
-      true,
-      'check-branch',
-      'check-decl',
-      'check-operator',
-      'check-preblock',
-      'check-separator',
-      'check-type'
-    ],
+    'unified-signatures': true // @typescript-eslint/unified-signatures
 
+    // -------------------------------------------------------------------------
 
-    'promise-function-async': true,
-    'no-null-undefined-union': true,
-    'type-literal-delimiter': true
+    // rules in https://github.com/typescript-eslint/typescript-eslint, typescript specific
+    // @typescript-eslint/member-delimiter-style
+    // @typescript-eslint/member-naming
+
+    // -------------------------------------------------------------------------
+
+    // rules in https://github.com/typescript-eslint/typescript-eslint, but not typescript specific
+    // @typescript-eslint/camelcase
+    // 'class-name': undefined, @typescript-eslint/class-name-casing
+    // @typescript-eslint/explicit-function-return-type
+    // @typescript-eslint/generic-type-naming
+    // 'indent', @typescript-eslint/indent
+    // @typescript-eslint/no-array-constructor
+    // 'no-unnecessary-class': undefined, // @typescript-eslint/no-extraneous-class
+    // 'no-require-imports': undefined, // @typescript-eslint/no-require-imports
+    // 'no-this-assignment': undefined, // @typescript-eslint/no-this-alias
+    // 'no-unused-variable': undefined,
+    // @typescript-eslint/no-useless-constructor
+    // @typescript-eslint/prefer-for-of
   }
 };

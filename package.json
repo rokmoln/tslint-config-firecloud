@@ -2,7 +2,7 @@
   "private": true,
   "name": "tslint-config-firecloud",
   "description": "The TSLint config used within Tobii Cloud Services.",
-  "version": "0.1.0",
+  "version": "0.2.0-eslint.2",
   "license": "Unlicense",
   "files": [
     "/BUILD",
@@ -14,13 +14,13 @@
   ],
   "dependencies": {},
   "peerDependencies": {
-    "tslint": "^5.9.1",
+    "tslint": "^5.16.0",
     "typescript": "^3.0.3"
   },
   "devDependencies": {
     "eclint": "^2.3.0",
     "npm-publish-git": "git://github.com/andreineculau/npm-publish-git.git#semver:~0.0.8",
-    "tslint": "^5.9.1",
+    "tslint": "^5.16.0",
     "typescript": "^3.0.3"
   },
   "scripts": {
