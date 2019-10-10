@@ -5,7 +5,7 @@ module.exports = {
 
   rules: {
     'angular-whitespace': false, // deprecated
-    'component-change-detection': true,
+    'prefer-on-push-component-change-detection': false,
     'component-class-suffix': true,
     'component-max-inline-declarations': true,
     'component-selector': [true, 'element', 'sg', 'kebab-case'],
@@ -25,14 +25,12 @@ module.exports = {
     'no-outputs-metadata-property': true,
     'no-pipe-impure': true,
     'no-queries-metadata-property': true,
-    'no-queries-parameter': true,
     'no-unused-css': true,
     'pipe-naming': false, // deprecated
     'pipe-prefix': false,
     'prefer-inline-decorator': false,
     'prefer-output-readonly': true,
     'relative-url-prefix': true,
-    'selector-property-base': true,
     'template-accessibility-alt-text': true,
     'template-accessibility-elements-content': true,
     'template-accessibility-label-for': true,
