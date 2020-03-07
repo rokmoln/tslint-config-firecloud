@@ -50,5 +50,5 @@ These addons require you to install the plugin manually:
 [UNLICENSE](UNLICENSE)
 
 
-  [1]: https://travis-ci.com/tobiipro/tslint-config-firecloud
-  [2]: https://travis-ci.com/tobiipro/tslint-config-firecloud.svg?branch=master
+  [1]: https://travis-ci.com/rokmoln/tslint-config-firecloud
+  [2]: https://travis-ci.com/rokmoln/tslint-config-firecloud.svg?branch=master
